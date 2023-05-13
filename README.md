@@ -1,3 +1,3 @@
 # 0xCeloTut
 
-Trying to bild the marketplace dApp
+Trying to build the marketplace dApp
