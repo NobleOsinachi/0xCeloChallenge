@@ -1,3 +1,3 @@
 # 0xCeloTut
 
-Trying to build the marketplace dApp
+Trying to build the marketplace dApp using the Celo blockchain.
