@@ -1,0 +1,149 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "readProduct",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_image",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_location",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "writeProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
+			"details": "Store & retrieve products uploaded on the app",
+			"kind": "dev",
+			"methods": {
+				"readProduct(uint256)": {
+					"details": "Return value",
+					"returns": {
+						"_0": " address payable: Represents the owner's address of the product. string memory: Represents the name of the product. string memory: Represents the image of the product. string memory: Represents the description of the product. string memory: Represents the location of the product. uint256: Represents the price of the product. uint256: Represents the number of units sold for the product."
+					}
+				},
+				"writeProduct(uint256,string,string,string,string,uint256)": {
+					"details": "Store value in Product",
+					"params": {
+						"_index": "similar to id"
+					}
+				}
+			},
+			"title": "Marketplace",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Marketplace.sol": "Marketplace"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Marketplace.sol": {
+			"keccak256": "0xa6437d41272e0f5caf3fd0387d9045465ce3df5d755d3404e19e02a5d8fc1bde",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://55750c1210715a70ee87342ecacf3d0378e19f8fad16e2d2f22df2ccd96ad74b",
+				"dweb:/ipfs/QmfB8pWv6YXAMbsaTvTMA4aoDABGAauSk3nsVP9cBAkg97"
+			]
+		}
+	},
+	"version": 1
+}
