@@ -57,11 +57,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_index",
-						"type": "uint256"
-					},
-					{
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
@@ -104,11 +99,8 @@
 						"_0": " address payable: Represents the owner's address of the product. string memory: Represents the name of the product. string memory: Represents the image of the product. string memory: Represents the description of the product. string memory: Represents the location of the product. uint256: Represents the price of the product. uint256: Represents the number of units sold for the product."
 					}
 				},
-				"writeProduct(uint256,string,string,string,string,uint256)": {
-					"details": "Store value in Product",
-					"params": {
-						"_index": "similar to id"
-					}
+				"writeProduct(string,string,string,string,uint256)": {
+					"details": "Store value in Product"
 				}
 			},
 			"title": "Marketplace",
@@ -137,11 +129,11 @@
 	},
 	"sources": {
 		"contracts/Marketplace.sol": {
-			"keccak256": "0xfa751fd1945953fcf787063828bd608ca4e89f33a0d8e522983512caf53c8dfe",
+			"keccak256": "0x70e54d68b30d973395e162ee28171d18165724442587dd187429a705c012c150",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c047e6d68278df0fe8ef3c8ff3816d696573514b50b50f314dbc4b089545dccd",
-				"dweb:/ipfs/QmRfFdbJUP2k4hyhpRL65TS9S7sgYcCbbVYSGKbUEZCXsb"
+				"bzz-raw://33babb8beae66a8760d4af153e46488250a7bb7627f6c46a3415cf1cfb839412",
+				"dweb:/ipfs/QmTXpUe8xtR7SCfy5jDt5o4RuoFAYDgPwR4XVTpnsWwma6"
 			]
 		}
 	},

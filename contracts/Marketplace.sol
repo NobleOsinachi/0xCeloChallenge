@@ -19,14 +19,14 @@ contract Marketplace {
     }
 
     mapping(uint256 => Product) internal products;
+    uint256 internal productLength;
 
     /**
      * @dev Store value in Product
-     * @param _index similar to id
      */
-     // 1, "Banana", "banana.png", "good fruit, healthy and delicious", "Nigeria", 3.12
+    // 1, "Banana", "banana.png", "good fruit, healthy and delicious", "Nigeria", 3.12
     function writeProduct(
-        uint256 _index,
+        // uint256 _index,
         string memory _name,
         string memory _image,
         string memory _description,
@@ -34,12 +34,13 @@ contract Marketplace {
         uint256 _price
     )
         public
-    // uint256 _sold, // when creaitng a newproduct, numberSold is default to 0
-
     {
-        uint256 _sold = 0;
+        uint256 _sold = 0; // when adding a new product, number of the items sold is 0
 
-        products[_index] = Product(
+        products[
+            // _index
+            productLength
+            ] = Product(
             payable(address(msg.sender)),
             _name,
             _image,
@@ -48,6 +49,7 @@ contract Marketplace {
             _price,
             _sold
         );
+        productLength++;
     }
 
     /**
@@ -89,9 +91,6 @@ contract Marketplace {
         );
     }
 }
-
-
-
 
 /*
 
