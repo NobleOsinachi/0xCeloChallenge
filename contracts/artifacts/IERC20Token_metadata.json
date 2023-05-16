@@ -202,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Marketplace.sol": "IERC20"
+			"contracts/Marketplace.sol": "IERC20Token"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -217,11 +217,11 @@
 	},
 	"sources": {
 		"contracts/Marketplace.sol": {
-			"keccak256": "0x76c153980c334c003da56767aee64d12d3599363c56049a04aa5b3363aa8ff9c",
+			"keccak256": "0xb54e1658cb1513c180ee2c5a8cfbb2310b3c53e2f27d0e5d5ed510b9e9a77dd1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b9ea9bba0fb2bc4fd05f891c7ee37d9b293fad52ac1b9aaa9da5dfd80f519a3",
-				"dweb:/ipfs/QmdiRaVpz3bVhdz4Rx3c21X2h4mTekRYqDwhbiE1CADgwX"
+				"bzz-raw://bcab3359d62c3dbddf93e35db263dc489092896e649b04e5573acfd581eec0f6",
+				"dweb:/ipfs/QmRLFeRordmJUsDE7qQKfyrgiD7ud134u3DXKAk9w6mxQE"
 			]
 		}
 	},

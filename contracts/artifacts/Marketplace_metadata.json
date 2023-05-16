@@ -6,6 +6,19 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "buyProduct",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getProductsLength",
 				"outputs": [
@@ -116,6 +129,11 @@
 					"details": "Store value in Product"
 				}
 			},
+			"stateVariables": {
+				"cUsdAddress": {
+					"details": "contract we want to interact with"
+				}
+			},
 			"title": "Marketplace",
 			"version": 1
 		},
@@ -142,11 +160,11 @@
 	},
 	"sources": {
 		"contracts/Marketplace.sol": {
-			"keccak256": "0xadb3fcb1cca58aa34d2dcbcea050b2fc82610304f71b2a83b1ee21ec2c93b81b",
+			"keccak256": "0xb54e1658cb1513c180ee2c5a8cfbb2310b3c53e2f27d0e5d5ed510b9e9a77dd1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://582077d4e7ef9cf064316723d9d93f2721cd7072a4c4cde2f88af873ca83ea0d",
-				"dweb:/ipfs/QmZGfB66hrDdFpriMQXFAUKD7cg6zxW5xzavnjEZe6qq4y"
+				"bzz-raw://bcab3359d62c3dbddf93e35db263dc489092896e649b04e5573acfd581eec0f6",
+				"dweb:/ipfs/QmRLFeRordmJUsDE7qQKfyrgiD7ud134u3DXKAk9w6mxQE"
 			]
 		}
 	},

@@ -2,7 +2,7 @@
 
 pragma solidity >=0.8.2 <0.9.0;
 
-interface IERC20 {
+interface IERC20Token {
     function totalSupply() external view returns (uint256);
 
     function balanceOf(address account) external view returns (uint256);
@@ -69,7 +69,12 @@ contract Marketplace {
     }
 
     mapping(uint256 => Product) internal products;
-    uint256 internal productLength;
+    uint256 internal productsLength;
+
+    /**
+     * @dev  contract we want to interact with
+     */
+    address internal cUsdAddress = 0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
 
     /**
      * @dev Store value in Product
@@ -87,7 +92,7 @@ contract Marketplace {
 
         products[
             // _index
-            productLength
+            productsLength
         ] = Product(
             payable(address(msg.sender)),
             _name,
@@ -97,7 +102,7 @@ contract Marketplace {
             _price,
             _sold
         );
-        productLength++;
+        productsLength++;
     }
 
     /**
@@ -140,7 +145,20 @@ contract Marketplace {
     }
 
     function getProductsLength() public view returns (uint256) {
-        return productLength;
+        return productsLength;
+    }
+
+    function buyProduct(uint256 _index) public payable {
+        require(
+            IERC20Token(cUsdAddress).transferFrom(
+                address(msg.sender),
+                products[_index].owner,
+                products[_index].price
+            ),
+            "Transfer failed"
+        );
+products[_index].sold++;
+
     }
 }
 
@@ -168,3 +186,6 @@ Solution: Consider using a more efficient data structure or storage pattern to r
 
 These are some general issues and potential solutions based on the provided code. However, it's important to thoroughly review and test the code in the context of your specific requirements to identify and address any additional vulnerabilities or improvements
 */
+
+
+////
