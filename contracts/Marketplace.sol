@@ -1,6 +1,56 @@
-// SPDX-License-Identifier: GPL-3.0
+// SPDX-License-Identifier: MIT
 
 pragma solidity >=0.8.2 <0.9.0;
+
+interface IERC20 {
+    function totalSupply() external view returns (uint256);
+
+    function balanceOf(address account) external view returns (uint256);
+
+    function transfer(address recipient, uint256 amount)
+        external
+        returns (bool);
+
+    function allowance(address owner, address sender)
+        external
+        view
+        returns (uint256);
+
+    function approve(address sender, uint256 amount) external returns (bool);
+
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) external returns (bool);
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(
+        address indexed owner,
+        address indexed sender,
+        uint256 value
+    );
+}
+
+/*
+WITHOUT VARIABLE NAMES
+
+pragma solidity ^0.8.0;
+
+interface IERC20 {
+    function totalSupply() external view returns (uint256);
+    function balanceOf(address) external view returns (uint256);
+    function transfer(address, uint256) external returns (bool);
+    function allowance(address, address) external view returns (uint256);
+    function approve(address, uint256) external returns (bool);
+    function transferFrom(address, address, uint256) external returns (bool);
+
+    event Transfer(address indexed, address indexed, uint256 );
+    event Approval(address indexed, address indexed, uint256 );
+}
+
+
+*/
 
 /**
  * @title Marketplace
@@ -24,7 +74,7 @@ contract Marketplace {
     /**
      * @dev Store value in Product
      */
-    // 1, "Banana", "banana.png", "good fruit, healthy and delicious", "Nigeria", 3.12
+    // 1, "Banana", "banana.png", "good fruit, healthy and delicious", "Nigeria", 30
     function writeProduct(
         // uint256 _index,
         string memory _name,
@@ -32,15 +82,13 @@ contract Marketplace {
         string memory _description,
         string memory _location,
         uint256 _price
-    )
-        public
-    {
+    ) public {
         uint256 _sold = 0; // when adding a new product, number of the items sold is 0
 
         products[
             // _index
             productLength
-            ] = Product(
+        ] = Product(
             payable(address(msg.sender)),
             _name,
             _image,
@@ -89,6 +137,10 @@ contract Marketplace {
             products[_index].price,
             products[_index].sold
         );
+    }
+
+    function getProductsLength() public view returns (uint256) {
+        return productLength;
     }
 }
 
